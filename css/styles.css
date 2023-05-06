@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=GFS+Didot&family=Koh+Santepheap:wght@700&family=Sancreek&display=swap');
+
+/* Sets the mobile grid */
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 5fr 2fr 1fr;
+    height: 100vh;
+    max-width: 100%;
+    grid-template-areas:
+    "header"
+    "navigation"
+    "maincontent"
+    "footer";
+    box-sizing: border-box;
+    background-color: #fdfdfd;
+    color: #000000;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Start header specific css */
+header {
+    grid-area: header;
+    display: grid;
+    background-color: #573282;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "titleareaone toplogoarea" "titleareatwo toplogoarea";
+    grid-gap: 0;
+    align-items: center;
+    color: #fdfdfd;
+    font-family: Sancreek;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.titlewsdash {
+    grid-area: titleareaone;
+    padding-left: 20px;
+    margin-bottom: 0px;
+}
+
+.titleet {
+    grid-area: titleareatwo;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.logoarea {
+    grid-area: toplogoarea;
+}
+
+.logoarea > img {
+    max-width: 100%;
+}
+/* End header specific css */
+
+
+/* Start navbar specific css */
+
+nav {
+    grid-area: navigation;
+    background-color: #d9d9d9;
+    font-family: Koh Santepheap;
+}
+
+.navbarcontainer {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigationbar li {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #e30d0d;
+    border: #1c0f5f solid 1px;
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.navigationbar li a {
+    color: #fdfdfd;
+    text-decoration: none;
+    display: block;
+    padding: 4vh 30vw;
+}
+
+.navigationbar li:hover, li:focus {
+    background-color: #fdfdfd;
+}
+
+.navigationbar li:hover a {
+    color: #e30d0d;
+    text-decoration: none;
+}
+
+#currentpage {
+    background-color: #fdfdfd;
+}
+
+#currentpage a {
+    color: #e30d0d;
+}
+/* End navbar specific css */
+
+/*Start main content css */
+main {
+    grid-area: maincontent;
+    display: block;
+    padding: 10px;
+}
+
+h2 {
+    font-family: Faster One;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: Koh Santepheap;
+    font-size: 15px;
+    text-decoration: underline #e30d0d 4px;
+}
+
+main p {
+    font-family: GFS Didot;
+}
+/* End main content css */
+
+
+/* Start footer specific css */
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "bottomlogoarea contactnamearea" "bottomlogoarea contactinfoarea";
+    width: 100%;
+    background-color: #575757;
+    color: #fdfdfd;
+    font-family: GFS Didot;
+    box-sizing: border-box;
+}
+
+figure {
+    grid-area: bottomlogoarea;
+}
+
+figure > img {
+    max-width: 100%;
+}
+
+figcaption {
+    font-size: 10px;
+}
+
+.contactname {
+    grid-area: contactnamearea;
+}
+
+.contactinfo {
+    grid-area: contactinfoarea;
+}
+/* End footer specific css */
+
+
+.boltimage {
+    width: 100%;
+    grid-area: image;
+}
+
+/* Specific pages */
+.maincategory {
+    margin: 5px;
+    padding: 8px;
+    border: #ad92df solid 2px;
+    border-radius: 5px;
+}
+
+.subsection {
+    padding: 3px;
+}
+
+.schedule > .maincategory {
+    border: #1c0f5f solid 2px;
+}
+
+.datecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.datebox {
+    background-color: #ad92df;
+    border: #573282 5px solid;
+    border-radius: 8px;
+    text-align: center;
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 25%;
+    margin-bottom: 15px;
+
+}
+
+h4 {
+    font-family: GFS Didot;
+}
+
+figcaption {
+    text-align: center;
+}
+
+main ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+main li {
+    font-family: GSF Didot;
+}
+
+
+@media screen and (min-width: 769px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr 5fr 0.5fr;
+        grid-template-areas: "header" "navigation" "maincontent" "footer";
+    }
+
+    header {
+        grid-template-columns: 3fr 2fr 3fr;
+        grid-template-rows: 2fr;
+        grid-template-areas: "titleareaone toplogoarea titleareatwo";
+        font-size: 20px;
+    }
+
+    .titlewsdash {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .titleet {
+        text-align: right;
+        margin-top: 15px;
+        padding-left: 0px;
+        padding-right: 20px;
+    }
+
+    .logoarea img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 5vw;
+    }
+
+    .navbarcontainer {
+        text-align: center;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .navigationbar li {
+        display: inline;
+        flex-direction: row;
+        padding: 4vh 2.5vw;
+        text-align: center;
+    }
+
+    .navigationbar li a {
+        color: #fdfdfd;
+        text-decoration: none;
+        display: inline-block;
+        padding: 4vh 2.5vw;
+        width: 10%;
+        text-align: center;
+    }
+
+    main {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "handbook handbook image" "pregame ingame postgame";
+        grid-gap: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .handbook {
+        grid-area: handbook;
+        margin-top: 0;
+
+    }
+
+    .desktopge img {
+        grid-area: image;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .pregame {
+        grid-area: pregame;
+    }
+
+    .ingame {
+        grid-area: ingame;
+    }
+
+    .postgame {
+        grid-area: postgame;
+    }
+
+
+    footer {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "bottomlogoarea contactnamearea contactinfoarea";
+        justify-items: center;
+    }
+
+    .contactname {
+        margin-top: 18vh;
+        margin-bottom: 9vh;
+        text-align: center;
+    }
+    
+    .contactinfo {
+        margin-top: 18vh;
+        margin-bottom: 9vh;
+        text-align: right;
+    }
+
+    .schedule {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .schedule > .maincategory {
+        width: 45%;
+    }
+
+    .skits {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0px;
+        justify-content: center;
+    }
+
+    .skits > .maincategory {
+        width: 97%;
+    }
+
+    .skits .subsection {
+        margin-left: 30px;
+    }
+
+    .subcomponentscontainer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .instructionsbox  {
+        width: 60%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .needsbox {
+        width: 20%;
+        text-align: center;
+        border-left: #e30d0d dashed 2px;
+        border-right: #e30d0d dashed 2px;
+    }
+
+    .propsbox {
+        width: 20%;
+        text-align: center;
+    }
+}
